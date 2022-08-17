@@ -1,0 +1,441 @@
+                            .header {
+                                position: relative;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                height: 15vh;
+                                width: 97vw;
+                                padding: 0 50px;
+                                position: fixed;
+                                top: 0;
+                                z-index: 3000;
+                                background-color: white;
+                            }
+                            
+                            .header a {
+                                color: var(--black);
+                                display: flex;
+                            }
+                            
+                            .header a span {
+                                padding: 0 5px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                            }
+                            
+                            .title-container {
+                                position: relative;
+                                margin-top: 24vh;
+                                height: 40vh;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                flex-direction: column;
+                                padding-top: 50px;
+                            }
+                            
+                            .logo {
+                                width: 150px;
+                                height: 28.56px;
+                            }
+                            
+                            a {
+                                text-decoration: none;
+                                font-size: 16px;
+                            }
+                            
+                            .title-header {
+                                font-weight: 600;
+                                font-size: 64px;
+                                text-align: center;
+                            }
+                            
+                            .title-header span:nth-of-type(1),
+                            .title-header span:nth-of-type(2) {
+                                font-style: normal;
+                                font-weight: 600;
+                                font-size: 54px;
+                                line-height: 65px;
+                                letter-spacing: -0.02em;
+                            }
+                            
+                            .title-header,
+                            .sub-header {
+                                display: flex;
+                                flex-direction: column;
+                                text-align: center;
+                            }
+                            
+                            .sub-header span:nth-of-type(1),
+                            .sub-header span:nth-of-type(2),
+                            .sub-header span:nth-of-type(3) {
+                                font-size: 16px;
+                            }
+                            
+                            .sub-header {
+                                font-weight: 450;
+                                font-size: 15px;
+                                line-height: 30px;
+                                padding-top: 10px;
+                                padding-bottom: 10px;
+                                color: #141414
+                            }
+                            
+                            .email {
+                                width: 450px;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                            }
+                            
+                            .email input {
+                                margin: 16px;
+                                width: 300px;
+                                height: 55px;
+                                padding: 15px;
+                                font-size: 13px;
+                                border: none;
+                                border-radius: 8px;
+                                background-color: #FAFAFA;
+                                color: var(--grey);
+                                font-style: normal;
+                                font-weight: 300;
+                                font-size: 14px;
+                                line-height: 30px;
+                                outline: 1px solid #e2e2e2;
+                                /* identical to box height, or 214% */
+                                color: #979797;
+                            }
+                            
+                            .email input::placeholder {
+                                color: var(--grey)
+                            }
+                            
+                            .email button {
+                                width: 150px;
+                                height: 55px;
+                                font-size: 16px;
+                                background-color: var(--blue);
+                                border: none;
+                                cursor: pointer;
+                                border-radius: 8px;
+                                font-style: normal;
+                                font-weight: 800;
+                                line-height: 23px;
+                                color: #FFFFFF;
+                                font-weight: 500
+                            }
+                            
+                            .bigimage {
+                                height: 610.66px;
+                                width: 1239.97px;
+                                position: relative;
+                                background-image: url("../../images/BIG\ IMAGE.png");
+                                background-position: center;
+                                background-size: contain;
+                                background-repeat: no-repeat;
+                                /* background-color: #9797973d; */
+                            }
+                            
+                            .bgImageContainer {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                margin-top: 10vh;
+                            }
+                            
+                            .title-Why span {
+                                font-size: 38px!important
+                            }
+                            
+                            .cards {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                gap: 1rem;
+                            }
+                            
+                            .footer {
+                                display: flex;
+                                padding: 0 50px;
+                                justify-content: space-between;
+                                align-items: center;
+                                background-color: #FFF;
+                                height: 10vh;
+                                position: relative;
+                                bottom: 0;
+                            }
+                            
+                            .footer span {
+                                font-size: 14px;
+                            }
+                            
+                            .footer a {
+                                font-size: 14px;
+                                color: #555555
+                            }
+                            
+                            .title-Why {
+                                justify-content: start;
+                            }
+                            
+                            @media screen and (max-width: 770px) {
+                                .title-container {
+                                    /* margin-top: 10vh; */
+                                    padding-top: 0px;
+                                }
+                                .whyContainer {
+                                    margin-top: 10px;
+                                }
+                            }
+                            
+                            @media screen and (max-width: 744px) {
+                                .title-container {
+                                    /* margin-top: 10vh; */
+                                    padding-top: 0px;
+                                }
+                                .whyContainer {
+                                    margin-top: 10px;
+                                }
+                                .bigimage {
+                                    height: 310.66px;
+                                }
+                                .sub-header {
+                                    line-height: 29px;
+                                }
+                                .sub-header span:nth-of-type(1),
+                                .sub-header span:nth-of-type(2),
+                                .sub-header span:nth-of-type(3) {
+                                    font-size: 13px;
+                                }
+                                .title-container {
+                                    height: 29vh;
+                                    justify-content: unset;
+                                }
+                            }
+                            
+                            @media screen and (max-width: 695px) {
+                                .title-container {
+                                    height: 25vh;
+                                }
+                                .card span:nth-of-type(1) {
+                                    font-size: 15px;
+                                }
+                                .cards {
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    gap: 0.5rem;
+                                }
+                                .header a {
+                                    font-size: 15px;
+                                }
+                            }
+                            
+                            @media screen and (max-width: 655px) {
+                                .header a {
+                                    font-size: 15px;
+                                }
+                                .title-header span:nth-of-type(1),
+                                .title-header span:nth-of-type(2) {
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    font-size: 45px;
+                                    line-height: 45px;
+                                    letter-spacing: -0.02em;
+                                }
+                                .cards {
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    flex-direction: column;
+                                    gap: 0px;
+                                }
+                                .card {
+                                    margin-bottom: 10px;
+                                }
+                            }
+                            
+                            @media screen and (max-width: 523px) {
+                                .sub-header span:nth-of-type(1),
+                                .sub-header span:nth-of-type(2) {
+                                    font-size: 10px;
+                                }
+                            }
+                            
+                            @media screen and (max-width: 523px) {
+                                .sub-header span:nth-of-type(1),
+                                .sub-header span:nth-of-type(2),
+                                .sub-header span:nth-of-type(3) {
+                                    font-size: 11px;
+                                }
+                                .bigimage {
+                                    margin-top: 3vh;
+                                }
+                            }
+                            
+                            .hidden {
+                                display: none;
+                            }
+                            
+                            .hidden-header {
+                                display: none;
+                            }
+                            
+                            @media screen and (max-width: 470px) {
+                                .title-header span:nth-of-type(1),
+                                .title-header span:nth-of-type(2) {
+                                    font-size: 40px;
+                                    line-height: 60px;
+                                }
+                                .default-1 {
+                                    display: none;
+                                }
+                                .hidden {
+                                    display: contents;
+                                    display: flex;
+                                    text-align: center;
+                                }
+                                .sub-header {
+                                    display: center;
+                                    font-size: 11px;
+                                }
+                                .header {
+                                    padding: 0px;
+                                }
+                                .title-Why span {
+                                    font-size: 28px!important;
+                                }
+                            }
+                            
+                            @media screen and (max-width: 465px) {
+                                .email {
+                                    width: 400px;
+                                }
+                                .bigimage {
+                                    margin-top: 1vh;
+                                }
+                            }
+                            
+                            @media screen and (max-width: 455px) {
+                                .hidden-header {
+                                    display: flex;
+                                    text-align: center;
+                                }
+                                .default-header {
+                                    display: none;
+                                }
+                            }
+                            
+                            @media screen and (max-width: 426px) {
+                                .title-header span:nth-of-type(1),
+                                .title-header span:nth-of-type(2) {
+                                    font-size: 35px;
+                                    line-height: 50px;
+                                }
+                                .bigimage {
+                                    /* margin-top: 5vh; */
+                                    height: 210.66px;
+                                    width: 1239.97px;
+                                }
+                                .footer {
+                                    padding: 0px 0px
+                                }
+                            }
+                            
+                            @media screen and (max-width: 383px) {
+                                .title-header span:nth-of-type(1),
+                                .title-header span:nth-of-type(2) {
+                                    font-size: 33px;
+                                    line-height: 50px;
+                                }
+                                .email {
+                                    width: 380px;
+                                }
+                                .bigimage {
+                                    /* margin-top: 5vh; */
+                                    height: 210.66px;
+                                    width: 1239.97px;
+                                }
+                            }
+                            
+                            @media screen and (max-width:367px) {
+                                .title-header span:nth-of-type(1),
+                                .title-header span:nth-of-type(2) {
+                                    font-size: 30px;
+                                    line-height: 40px;
+                                }
+                                .sub-header {
+                                    line-height: 20px;
+                                }
+                            }
+                            
+                            @media screen and (max-width:367px) {
+                                .title-Why span {
+                                    font-size: 23px!important;
+                                }
+                            }
+                            
+                            @media screen and (max-width:340px) {
+                                .title-Why span {
+                                    font-size: 23px!important;
+                                }
+                                .title-header span:nth-of-type(1),
+                                .title-header span:nth-of-type(2) {
+                                    font-size: 28px;
+                                    line-height: 35px;
+                                }
+                            }
+                            
+                            @media screen and (max-width:322px) {
+                                .title-Why span {
+                                    font-size: 23px!important;
+                                }
+                                .title-header span:nth-of-type(1),
+                                .title-header span:nth-of-type(2) {
+                                    font-size: 25px;
+                                    line-height: 30px;
+                                }
+                                .bigimage {
+                                    height: 150.66px;
+                                }
+                                .header {
+                                    width: 100vw
+                                }
+                                .email {
+                                    width: 330px;
+                                }
+                                .whyContainer {
+                                    margin-top: 8vh;
+                                }
+                            }
+                            
+                            @media screen and (max-width:322px) {
+                                .header a {
+                                    font-size: 13px;
+                                }
+                                .logo {
+                                    width: 130px;
+                                    height: 23.56px;
+                                }
+                                .card {
+                                    height: 300px;
+                                    width: 250px;
+                                }
+                                .footer a {
+                                    font-size: 12px;
+                                    color: #555555;
+                                }
+                                .footer span {
+                                    font-size: 12px;
+                                }
+                            }
+                            
+                            @media screen and (max-width:296px) {
+                                .title-header span:nth-of-type(1),
+                                .title-header span:nth-of-type(2) {
+                                    font-size: 21px;
+                                    line-height: 30px;
+                                }
+                            }

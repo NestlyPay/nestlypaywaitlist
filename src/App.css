@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0 10px;
+    box-sizing: border-box;
+    font-family: 'CircularStd', sans-serif;
+}
+
+:root {
+    --white: #FFF;
+    --yellow: #F5C32C;
+    --black: #131B26;
+    --blue: #0C46D3;
+    --gray: #979797;
+    --blueCard: #DDF8FE;
+    --purple: rgb(238 210 255);
+    --boxShadow: 0px 19px 60px rgb(0 0 0 / 8%);
+    --orangeCard: rgba(252, 166, 31, 0.45);
+    --smboxShadow: -79px 51px 60px rgba(0, 0, 0, 0.08);
+}
+
+
+/* @keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
