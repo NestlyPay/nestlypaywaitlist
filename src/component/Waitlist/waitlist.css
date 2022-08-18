@@ -181,6 +181,9 @@
                             }
                             
                             @media screen and (max-width: 770px) {
+                                .header {
+                                    height: 10vh;
+                                }
                                 .title-container {
                                     /* margin-top: 10vh; */
                                     padding-top: 0px;
