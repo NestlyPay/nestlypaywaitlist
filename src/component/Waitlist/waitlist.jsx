@@ -10,6 +10,15 @@ import track from "./../../images/Group (2).png";
 function waitlist() {
   return (
     <div>
+      {/* <div className="background">
+        <div className="cube"></div>
+        <div className="cube"></div>
+        <div className="cube"></div>
+        <div className="cube"></div>
+        <div className="cube"></div>
+        <div className="cube"></div>
+        <div className="cube"></div>
+      </div> */}
       <div className="header">
         <img className="logo" src={Logo} alt="" />
         <a href="#">
@@ -59,10 +68,8 @@ function waitlist() {
           <span>products and services.</span>
         </div>
         <div className="sub-header hidden-header">
-            Businesses can create invoices, send invoices and track sales with
-            the
-            NestlyPay experience system . Businesses can track their
-            inventories,
+          Businesses can create invoices, send invoices and track sales with the
+          NestlyPay experience system . Businesses can track their inventories,
           products and services.
         </div>
       </div>
