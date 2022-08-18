@@ -267,6 +267,17 @@
                                 }
                             }
                             
+                            @media screen and (max-width: 510px) {
+                                .title-header span:nth-of-type(1),
+                                .title-header span:nth-of-type(2) {
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    font-size: 40px;
+                                    line-height: 43px;
+                                    letter-spacing: -0.02em;
+                                }
+                            }
+                            
                             @media screen and (max-width: 523px) {
                                 .sub-header span:nth-of-type(1),
                                 .sub-header span:nth-of-type(2),
@@ -289,8 +300,8 @@
                             @media screen and (max-width: 470px) {
                                 .title-header span:nth-of-type(1),
                                 .title-header span:nth-of-type(2) {
-                                    font-size: 40px;
-                                    line-height: 60px;
+                                    font-size: 35px;
+                                    line-height: 42px;
                                 }
                                 .default-1 {
                                     display: none;
@@ -334,8 +345,8 @@
                             @media screen and (max-width: 426px) {
                                 .title-header span:nth-of-type(1),
                                 .title-header span:nth-of-type(2) {
-                                    font-size: 35px;
-                                    line-height: 50px;
+                                    font-size: 31px;
+                                    line-height: 40px;
                                 }
                                 .bigimage {
                                     /* margin-top: 5vh; */
@@ -350,7 +361,7 @@
                             @media screen and (max-width: 383px) {
                                 .title-header span:nth-of-type(1),
                                 .title-header span:nth-of-type(2) {
-                                    font-size: 33px;
+                                    font-size: 30px;
                                     line-height: 50px;
                                 }
                                 .email {
@@ -366,7 +377,7 @@
                             @media screen and (max-width:367px) {
                                 .title-header span:nth-of-type(1),
                                 .title-header span:nth-of-type(2) {
-                                    font-size: 30px;
+                                    font-size: 28px;
                                     line-height: 40px;
                                 }
                                 .sub-header {
@@ -380,13 +391,13 @@
                                 }
                             }
                             
-                            @media screen and (max-width:340px) {
+                            @media screen and (max-width:347px) {
                                 .title-Why span {
                                     font-size: 23px!important;
                                 }
                                 .title-header span:nth-of-type(1),
                                 .title-header span:nth-of-type(2) {
-                                    font-size: 28px;
+                                    font-size: 23px;
                                     line-height: 35px;
                                 }
                             }
@@ -397,7 +408,7 @@
                                 }
                                 .title-header span:nth-of-type(1),
                                 .title-header span:nth-of-type(2) {
-                                    font-size: 25px;
+                                    font-size: 23px;
                                     line-height: 30px;
                                 }
                                 .bigimage {
@@ -438,7 +449,7 @@
                             @media screen and (max-width:296px) {
                                 .title-header span:nth-of-type(1),
                                 .title-header span:nth-of-type(2) {
-                                    font-size: 21px;
+                                    font-size: 16px;
                                     line-height: 30px;
                                 }
                             }
