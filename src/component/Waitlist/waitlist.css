@@ -258,6 +258,12 @@
                                  }
                                  
                                  @media screen and (max-width: 744px) {
+                                     .bigimage {
+                                         margin-top: 27vh;
+                                     }
+                                 }
+                                 
+                                 @media screen and (max-width: 744px) {
                                      .title-container {
                                          /* margin-top: 10vh; */
                                          padding-top: 0px;
@@ -297,6 +303,12 @@
                                      }
                                      .header a {
                                          font-size: 15px;
+                                     }
+                                 }
+                                 
+                                 @media screen and (max-width: 607px) {
+                                     .bigimage {
+                                         margin-top: 0vh;
                                      }
                                  }
                                  
@@ -441,12 +453,6 @@
                                          /* margin-top: 5vh; */
                                          height: 210.66px;
                                          width: 1239.97px;
-                                     }
-                                 }
-                                 
-                                 @media screen and (max-width: 744px) {
-                                     .bigimage {
-                                         margin-top: 27vh;
                                      }
                                  }
                                  
