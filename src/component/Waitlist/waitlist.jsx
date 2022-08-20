@@ -10,17 +10,20 @@ import Confirmation from '../Alert/Confirmation';
 import Axios from 'axios';
 
 function Waitlist() {
-  // setTimeout(function () {
-  //   if (joined) {
-  //     setjoined(false);
-  //   }
-  // }, 10000);
+  setTimeout(function () {
+    if (joined) {
+      setjoined(false);
+    }
+  }, 10000);
   const [emailNull, setErrorEmpty] = useState(false);
   const [joined, setjoined] = useState(false);
   const closePopup = (e) => {
     setjoined(false);
   }
   
+   const openPopup = (e) => {
+     setjoined(true);
+   };
   const url = "https://nestlypaywaitlist-api.herokuapp.com/api/mail";
   const [data, setData] = useState("");
   
@@ -57,7 +60,7 @@ function Waitlist() {
     <div>
       {joined ? (
         <div className="alert-background" onClick={closePopup}>
-          <Confirmation />
+          <Confirmation onClick={openPopup} />
         </div>
       ) : (
         ""
@@ -100,7 +103,9 @@ function Waitlist() {
               value={data.email}
               placeholder="Enter Your Email"
             />
-            {emailNull ? <span className="errorText">An Error Occured</span> : null}
+            {emailNull ? (
+              <span className="errorText">An Error Occured</span>
+            ) : null}
           </div>
           <button type="submit" onClick={submit}>
             Join Waitlist
