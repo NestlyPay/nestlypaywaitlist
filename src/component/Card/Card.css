@@ -1,71 +1,87 @@
-    .card {
-        background-color: #000D2B;
-        border-radius: 20px;
-        padding: 10px 5px;
-        display: flex;
-        flex-direction: column;
-        color: var(--white);
-        position: relative;
-        align-items: center;
-        justify-content: center;
-        height: 300px;
-        width: 250px;
-        margin-bottom: 10vh;
-    }
-    
-    .card div {
-        background-color: #232e4a5d;
-        width: 65px;
-        height: 65px;
-        border-radius: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .card div img {
-        width: 45px;
-    }
-    
-    .card span:nth-of-type(1) {
-        padding: 20px 0px;
-    }
-    
-    .card span:nth-of-type(2) {
-        font-style: normal;
-        font-weight: 300;
-        font-size: 10px;
-        text-align: center;
-        line-height: 20px;
-    }
-    
-    @media screen and (max-width: 655px) {
-        .card {
-            margin-bottom: 10px;
-            height: 350px;
-            width: 300px;
-            padding: 10px 5px;
-        }
-        .card span:nth-of-type(1) {
-            padding: 30px 0px 20px 0px;
-            font-size: 20px;
-        }
-    }
-    
-    @media screen and (max-width: 641px) {
-        .sub-header span:nth-of-type(1),
-        .sub-header span:nth-of-type(2),
-        .sub-header span:nth-of-type(3) {
-            font-size: 12px;
-        }
-        * {
-            margin: 0;
-            /* padding: 0 5px; */
-            box-sizing: border-box;
-            font-family: 'CircularStd', sans-serif;
-        }
-    }
-    /* @media screen and (max-width: 523px) {
+                        .card {
+                            background-color: #000D2B;
+                            border-radius: 20px;
+                            padding: 10px 5px;
+                            display: flex;
+                            flex-direction: column;
+                            color: var(--white);
+                            position: relative;
+                            align-items: center;
+                            justify-content: center;
+                            height: 300px;
+                            width: 250px;
+                            margin-bottom: 10vh;
+                        }
+                        
+                        .card div {
+                            background-color: #232e4a5d;
+                            width: 65px;
+                            height: 65px;
+                            border-radius: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                        
+                        .card div img {
+                            width: 45px;
+                        }
+                        
+                        .card span:nth-of-type(1) {
+                            padding: 20px 0px;
+                        }
+                        
+                        .card span:nth-of-type(2) {
+                            font-style: normal;
+                            font-weight: 300;
+                            font-size: 10px;
+                            text-align: center;
+                            line-height: 20px;
+                        }
+                        
+                        @media screen and (max-width: 655px) {
+                            .card {
+                                margin-bottom: 10px;
+                                height: 350px;
+                                width: 300px;
+                                padding: 10px 5px;
+                            }
+                            .card span:nth-of-type(1) {
+                                padding: 30px 0px 20px 0px;
+                                font-size: 20px;
+                            }
+                        }
+                        
+                        @media screen and (max-width: 641px) {
+                            .sub-header span:nth-of-type(1),
+                            .sub-header span:nth-of-type(2),
+                            .sub-header span:nth-of-type(3) {
+                                font-size: 11px;
+                            }
+                            * {
+                                margin: 0;
+                                /* padding: 0 5px; */
+                                box-sizing: border-box;
+                                font-family: 'CircularStd', sans-serif;
+                            }
+                        }
+                        
+                        @media screen and (max-width: 361px) {
+                            .card {
+                                margin-bottom: 10px;
+                                height: 320px;
+                                width: 257px;
+                            }
+                        }
+                        
+                        @media screen and (max-width: 361px) {
+                            .card {
+                                margin-bottom: 10px;
+                                height: 290px;
+                                width: 240px;
+                            }
+                        }
+                        /* @media screen and (max-width: 523px) {
         .sub-header span:nth-of-type(1),
         .sub-header span:nth-of-type(2),
         .sub-header span:nth-of-type(3) {
