@@ -536,3 +536,16 @@
                                          line-height: 30px;
                                      }
                                  }
+                                 
+                                 .inputSide {
+                                     display: flex;
+                                     flex-direction: column;
+                                 }
+                                 
+                                 .errorText {
+                                     color: red;
+                                     position: absolute;
+                                     margin-left: 20px;
+                                     bottom: -15px;
+                                     font-size: 11px;
+                                 }

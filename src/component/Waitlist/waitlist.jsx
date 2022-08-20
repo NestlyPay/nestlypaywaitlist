@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import Logo from "./../../images/LOGO.png";
 import "./waitlist.css";
 import arrow from "./../../images/Vector (2).png";
@@ -6,21 +6,66 @@ import Card from "../Card/Card";
 import send from "./../../images/SEND.png";
 import file from "./../../images/FILE.png";
 import track from "./../../images/Group (2).png";
+import Confirmation from '../Alert/Confirmation';
+import Axios from 'axios';
 
-function waitlist() {
+function Waitlist() {
+  // setTimeout(function () {
+  //   if (joined) {
+  //     setjoined(false);
+  //   }
+  // }, 10000);
+  const [emailNull, setErrorEmpty] = useState(false);
+  const [joined, setjoined] = useState(false);
+  const closePopup = (e) => {
+    setjoined(false);
+  }
+  
+  const url = "https://nestlypaywaitlist-api.herokuapp.com/api/mail";
+  const [data, setData] = useState("");
+  
+  function submit(e) {
+    e.preventDefault();
+      Axios.post(url, {
+        email: data,
+      }).then((res) => {
+        console.log(res);
+        setjoined(true);
+        setErrorEmpty(false);
+         console.log("Thanks For Believing In Us");
+      }, (error) => {
+         console.log("An Error Occured");
+         setErrorEmpty(true);
+      });
+    
+    }
+  
+  
+  function handle(e) {
+    // const newdata = {data}
+    // newdata[e.target.id] = e.target.value
+    setData(e.target.value);
+    // setData(newdata)
+  }
+  function close(e) {
+    // const newdata = {data}
+    // newdata[e.target.id] = e.target.value
+    setData(e.target.value);
+    // setData(newdata)
+  }
   return (
     <div>
-      {/* <div className="background">
-        <div className="cube"></div>
-        <div className="cube"></div>
-        <div className="cube"></div>
-        <div className="cube"></div>
-        <div className="cube"></div>
-        <div className="cube"></div>
-        <div className="cube"></div>
-      </div> */}
+      {joined ? (
+        <div className="alert-background" onClick={closePopup}>
+          <Confirmation />
+        </div>
+      ) : (
+        ""
+      )}
       <div className="header">
-        <img className="logo" src={Logo} alt="" />
+        <a href="https://www.Nestlypay.com" target="_blank">
+          <img className="logo" src={Logo} alt="" />
+        </a>
         <a href="#">
           Join our Telegram
           <span>
@@ -44,10 +89,23 @@ function waitlist() {
           </span>
           <span>Be the first to know when we launch!</span>
         </div>
-        <div className="email">
-          <input type="text" placeholder="Enter Your Email" />
-          <button>Join Waitlist</button>
-        </div>
+        <form className="email" method="post" onSubmit={(e) => SubmitEvent(e)}>
+          <div className="inputSide">
+            <input
+              type="email"
+              onChange={(e) => handle(e)}
+              id="email"
+              name=""
+              required
+              value={data.email}
+              placeholder="Enter Your Email"
+            />
+            {emailNull ? <span className="errorText">An Error Occured</span> : null}
+          </div>
+          <button type="submit" onClick={submit}>
+            Join Waitlist
+          </button>
+        </form>
       </div>
       <div className="bgImageContainer">
         <div className="bigimage"></div>
@@ -98,4 +156,4 @@ function waitlist() {
   );
 }
 
-export default waitlist;
+export default Waitlist;

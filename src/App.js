@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
-import Waitlist from "./component/Waitlist/waitlist"
+import Waitlist from "./component/Waitlist/Waitlist"
 function App() {
   return (
     <div className="App">
