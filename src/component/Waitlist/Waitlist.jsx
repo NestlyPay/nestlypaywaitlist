@@ -50,12 +50,7 @@ function Waitlist() {
     setData(e.target.value);
     // setData(newdata)
   }
-  function close(e) {
-    // const newdata = {data}
-    // newdata[e.target.id] = e.target.value
-    setData(e.target.value);
-    // setData(newdata)
-  }
+
   return (
     <div>
       {joined ? (
