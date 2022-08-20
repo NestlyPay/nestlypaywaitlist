@@ -144,7 +144,7 @@ function Waitlist() {
         />
         <Card
           image={track}
-          detail="Reaching out to your customers as just gotten easier, guess what you can now send free invoices and get paid in the most simplest way."
+          detail="Follow up on customers with automated payment reminders and keep track of invoice status so you’ll never leave money off the table again."
           header="Track Sales"
         />
       </div>
