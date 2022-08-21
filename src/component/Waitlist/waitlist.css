@@ -250,6 +250,15 @@
         }
     }
     
+    @media screen and (min-width:926px) {
+        .title-container {
+            margin-top: 18vh;
+        }
+        .whyContainer {
+            margin-top: 0vh;
+        }
+    }
+    
     @media screen and (max-width: 812px) {
         .card {
             width: 240px;
