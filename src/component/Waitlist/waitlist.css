@@ -258,6 +258,11 @@
             margin-top: 0vh;
         }
     }
+    /* @media screen and (max-width:862px) {
+        .bigimage {
+            height: 610.66px;
+        }
+    } */
     
     @media screen and (max-width: 812px) {
         .card {
@@ -278,6 +283,12 @@
         }
         .whyContainer {
             margin-top: 0vh;
+        }
+    }
+    
+    @media screen and (min-width:954px) {
+        .bigimage {
+            height: 610px;
         }
     }
     
