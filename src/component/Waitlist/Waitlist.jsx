@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React,{useState} from "react";
 import Logo from "./../../images/LOGO.png";
 import "./waitlist.css";
@@ -8,6 +9,7 @@ import file from "./../../images/FILE.png";
 import track from "./../../images/Group (2).png";
 import Confirmation from '../Alert/Confirmation';
 import Axios from 'axios';
+import validator from "validator";
 
 function Waitlist() {
   setTimeout(function () {
@@ -15,9 +17,9 @@ function Waitlist() {
       setjoined(false);
     }
   }, 10000);
-  const [emailNull, setErrorEmpty] = useState(false);
+  const [ValidationMessage, setError] = useState("");
   const [joined, setjoined] = useState(false);
-  const closePopup = (e) => {
+   const closePopup = (e) => {
     setjoined(false);
   }
   
@@ -29,20 +31,22 @@ function Waitlist() {
   
   function submit(e) {
     e.preventDefault();
+    if (!validator.isEmail(data)) {
+      setError("Enter valid Email!");
+    } else {
       Axios.post(url, {
         email: data,
       }).then((res) => {
         console.log(res);
         setjoined(true);
-        setErrorEmpty(false);
-         console.log("Thanks For Believing In Us");
+       setError("");
+        console.log("Thanks For Believing In Us");
       }, (error) => {
-         console.log("An Error Occured");
-         setErrorEmpty(true);
+       
+        setError("An Error Occured");
       });
-    
     }
-  
+    }
   
   function handle(e) {
     // const newdata = {data}
@@ -61,7 +65,7 @@ function Waitlist() {
         ""
       )}
       <div className="header">
-        <a href="https://www.Nestlypay.com" target="_blank">
+        <a href="https://www.Nestlypay.com" target="_blank" rel="noreferrer">
           <img className="logo" src={Logo} alt="" />
         </a>
         <a href="#">
@@ -98,9 +102,8 @@ function Waitlist() {
               value={data.email}
               placeholder="Enter Your Email"
             />
-            {emailNull ? (
-              <span className="errorText">An Error Occured</span>
-            ) : null}
+
+            <span className="errorText">{ValidationMessage}</span>
           </div>
           <button type="submit" onClick={submit}>
             Join Waitlist
