@@ -44,6 +44,7 @@ function Waitlist() {
        setError("");
         console.log("Thanks For Believing In Us");
       }, (error) => {
+         console.log("Cant Send Mail");
         setError("An Error Occured");
       });
        emailjs
@@ -55,6 +56,7 @@ function Waitlist() {
          )
          .then(
            (result) => {
+             console.log("Email Delivered To Us");
              console.log(result.text);
            },
            (error) => {
