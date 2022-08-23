@@ -61,13 +61,13 @@ function Waitlist() {
              console.log(error.text);
            }
          );
-      Axios.post(emailurl, {
-        email: data,
-      }).then((res) => {
-        console.log("Email Set");
-      }, (error) => {
-        console.log("An Error Occured While Sending Feed-Back Mail");
-      });
+      // Axios.post(emailurl, {
+      //   email: data,
+      // }).then((res) => {
+      //   console.log("Email Set");
+      // }, (error) => {
+      //   console.log("An Error Occured While Sending Feed-Back Mail");
+      // });
      
     }
     }
@@ -92,7 +92,7 @@ function Waitlist() {
         <a href="https://www.Nestlypay.com" target="_blank" rel="noreferrer">
           <img className="logo" src={Logo} alt="" />
         </a>
-        <a href="#">
+        <a href="https://t.me/Nestlypay" target="_blank">
           Join our Telegram
           <span>
             <img src={arrow} alt="" />

@@ -21,7 +21,7 @@ function Confirmation() {
       <span>Create and send invoices, manage your finance,</span>
       <span>track sales, and get paid faster.</span>
       <div className="buttonContainer">
-        <button href='' className="joinUs">Join Our Community</button>
+        <button href='https://t.me/Nestlypay' className="joinUs">Join Our Community</button>
         <button onClick={copyLink} href='' className="share">Share to Your Friends</button>
       </div>
     </div>
