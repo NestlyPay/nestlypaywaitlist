@@ -44,7 +44,7 @@ function Waitlist() {
        setError("");
         console.log("Thanks For Believing In Us");
       }, (error) => {
-         console.log("Cant Send Mail");
+         
         setError("An Error Occured");
       });
        emailjs
@@ -56,20 +56,15 @@ function Waitlist() {
          )
          .then(
            (result) => {
-             console.log("Email Delivered To Us");
+             
              console.log(result.text);
            },
            (error) => {
+              console.log("Mail Sent");
              console.log(error.text);
            }
          );
-      // Axios.post(emailurl, {
-      //   email: data,
-      // }).then((res) => {
-      //   console.log("Email Set");
-      // }, (error) => {
-      //   console.log("An Error Occured While Sending Feed-Back Mail");
-      // });
+      
      
     }
     }
