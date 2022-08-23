@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React,{useState} from "react";
+import React, { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 import Logo from "./../../images/LOGO.png";
 import "./waitlist.css";
 import arrow from "./../../images/Vector (2).png";
@@ -22,13 +23,14 @@ function Waitlist() {
    const closePopup = (e) => {
     setjoined(false);
   }
-  
    const openPopup = (e) => {
      setjoined(true);
    };
   const url = "https://nestlypaywaitlist-api.herokuapp.com/api/mail";
+  const emailurl = "https://nestlypaywaitlist-api.herokuapp.com/api/send-email";
   const [data, setData] = useState("");
   
+   const form = useRef();
   function submit(e) {
     e.preventDefault();
     if (!validator.isEmail(data)) {
@@ -42,9 +44,31 @@ function Waitlist() {
        setError("");
         console.log("Thanks For Believing In Us");
       }, (error) => {
-       
         setError("An Error Occured");
       });
+       emailjs
+         .sendForm(
+           "service_frb4eji",
+           "template_j4wu7fk",
+           form.current,
+           "zwtgweGQnL0X3CK0y"
+         )
+         .then(
+           (result) => {
+             console.log(result.text);
+           },
+           (error) => {
+             console.log(error.text);
+           }
+         );
+      Axios.post(emailurl, {
+        email: data,
+      }).then((res) => {
+        console.log("Email Set");
+      }, (error) => {
+        console.log("An Error Occured While Sending Feed-Back Mail");
+      });
+     
     }
     }
   
@@ -91,13 +115,13 @@ function Waitlist() {
           </span>
           <span>Be the first to know when we launch!</span>
         </div>
-        <form className="email" method="post" onSubmit={(e) => SubmitEvent(e)}>
+        <form ref={form} className="email" method="post" onSubmit={(e) => SubmitEvent(e)}>
           <div className="inputSide">
             <input
               type="email"
               onChange={(e) => handle(e)}
               id="email"
-              name=""
+              name="email"
               required
               value={data.email}
               placeholder="Enter Your Email"
