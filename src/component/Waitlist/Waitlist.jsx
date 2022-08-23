@@ -49,10 +49,10 @@ function Waitlist() {
       });
        emailjs
          .sendForm(
-           "service_frb4eji",
-           "template_j4wu7fk",
+           "service_flas2xs",
+           "template_rtg2ie9",
            form.current,
-           "zwtgweGQnL0X3CK0y"
+           "faUpb7CrKO_NJhIia"
          )
          .then(
            (result) => {
@@ -60,7 +60,7 @@ function Waitlist() {
              console.log(result.text);
            },
            (error) => {
-              console.log("Cant send mail");
+             console.log("Cant send mail");
              console.log(error.text);
            }
          );
