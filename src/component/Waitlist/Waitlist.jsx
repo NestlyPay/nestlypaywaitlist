@@ -56,11 +56,11 @@ function Waitlist() {
          )
          .then(
            (result) => {
-             
+             console.log("send mail");
              console.log(result.text);
            },
            (error) => {
-              console.log("Mail Sent");
+              console.log("Cant send mail");
              console.log(error.text);
            }
          );
