@@ -126,6 +126,10 @@
     animation: animatezoom 1s
 }
 
+.link {
+    display: none;
+}
+
 @keyframes animatezoom {
     0% {
         /* transform: scale(1); */

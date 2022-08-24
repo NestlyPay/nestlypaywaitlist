@@ -9,12 +9,11 @@ function Confirmation() {
   }
   
    const copyLink = () => {
-     /* Get the text field */
-     var transferLink = "https://nestlypaywaitlist-api.herokuapp.com";
-     /* Copy the text inside the text field */
-     navigator.clipboard.writeText(transferLink);
-     /* Alert the copied text */
-     alert("Copied the text: " + transferLink);
+     var copyText = document.getElementById("link");
+     copyText.select();
+     copyText.setSelectionRange(0, 99999);
+     navigator.clipboard.writeText(copyText.value);
+     alert("Copied the Text", copyText.value);
    };
   return (
     <div className="alert animate-zoom">
@@ -26,8 +25,17 @@ function Confirmation() {
       <span>Create and send invoices, manage your finance,</span>
       <span>track sales, and get paid faster.</span>
       <div className="buttonContainer">
-        <button onClick={redirect} className="joinUs">Join Our Community</button>
-        <button onClick={copyLink} href='' className="share">Share to Your Friends</button>
+        <button onClick={redirect} className="joinUs">
+          Join Our Community
+        </button>
+        <button onClick={copyLink} href="" className="share">
+          Share to Your Friends
+        </button>
+        <input
+        className='link'
+          type="text" id='link'
+          value="https://nestlypaywaitlist-api.herokuapp.com"
+        />
       </div>
     </div>
   );
