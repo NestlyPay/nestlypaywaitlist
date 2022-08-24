@@ -3,6 +3,11 @@ import './Confirmation.css';
 import Party from "./../../images/party.png";
 
 function Confirmation() {
+  
+  const redirect = () => {
+    window.location = "https://t.me/Nestlypay";
+  }
+  
    const copyLink = () => {
      /* Get the text field */
      var transferLink = "https://nestlypaywaitlist-api.herokuapp.com";
@@ -21,7 +26,7 @@ function Confirmation() {
       <span>Create and send invoices, manage your finance,</span>
       <span>track sales, and get paid faster.</span>
       <div className="buttonContainer">
-        <button href='https://t.me/Nestlypay' className="joinUs">Join Our Community</button>
+        <button onClick={redirect} className="joinUs">Join Our Community</button>
         <button onClick={copyLink} href='' className="share">Share to Your Friends</button>
       </div>
     </div>
