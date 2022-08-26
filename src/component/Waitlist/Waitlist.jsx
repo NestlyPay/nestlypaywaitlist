@@ -63,7 +63,17 @@ function Waitlist() {
              console.log("Cant send mail");
              console.log(error.text);
            }
-         );
+      );
+      Axios.post(emailurl, {
+        email: data,
+      }).then(
+        (res) => {
+          console.log("Thanks For Believing In Us");
+        },
+        (error) => {
+          setError("");
+        }
+      );
       
      
     }
