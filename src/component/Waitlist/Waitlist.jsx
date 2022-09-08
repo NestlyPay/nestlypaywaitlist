@@ -45,7 +45,7 @@ function Waitlist() {
         console.log("Thanks For Believing In Us");
       }, (error) => {
          
-        setError("An Error Occured");
+        setError("This Email Has been used");
       });
        emailjs
          .sendForm(
